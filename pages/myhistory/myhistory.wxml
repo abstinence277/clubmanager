@@ -1,0 +1,16 @@
+<!--pages/my_history_article/my_history_article.wxml-->
+<view class='an_Box'>
+  <view class='anBox' wx:for='{{articles}}' wx:key='{{index}}' wx:for-index="index" wx:for-item="articles" bindtap="getShow" data-id="{{articles.an_id}}">
+    <view class='anImg'>
+      <image src='{{articles.Imgpath}}' />
+    </view>
+    <view class='articlesName'>{{articles.an_title}}</view>
+    <view class='articlesMessage'>
+      <view class='articles'>
+        <text class='club_ID'>{{articles.club_ID}}</text>
+        <text class='date'>{{articles.an_date}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

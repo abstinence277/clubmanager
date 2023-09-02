@@ -1,0 +1,52 @@
+<image src='/images/aa.jpeg' style="width: 750rpx; height: 1436rpx; display: inline-block; box-sizing: border-box; position: relative; left: -2rpx; top: 0rpx"></image>
+<view style="position: absolute; display: flex; align-items: center; justify-content: center; top: 120rpx; width: 314rpx; height: 68rpx; box-sizing: border-box; left: 216rpx; border-style: solid; border-width: 3rpx; border-color: green">社团功能管理</view>
+<view style="position: relative; left: 0rpx; top: -532rpx; width: 750rpx; height: 46rpx; display: block; box-sizing: border-box">
+  <image src='/images/logo2.jpeg' style="width: 524rpx; height: 505rpx; display: inline-block; box-sizing: border-box; position: relative; left: 113rpx; top: -481rpx"></image>
+</view>
+
+<view style="position: relative; width: 750rpx; height: 1436rpx; display: block; box-sizing: border-box; left: -2rpx; top: -842rpx">
+  <button style="position: relative; left: -276rpx; top: -98rpx; width: 184rpx; height: 134rpx; display: block; box-sizing: border-box;border-radius: 50rpx;background: linear-gradient(to right, #94cebf, #279454)" bindtap="check">审核招新</button>
+
+  <button style="position: relative; left: 282rpx; top: -232rpx; width: 184rpx; height: 134rpx; display: block; box-sizing: border-box;border-radius: 50rpx;background: linear-gradient(to right, #94cebf, #279454);;" bindtap="memberinfo">社员信息</button>
+  <button style="position: relative; left: 0rpx; top: -544rpx; width: 310rpx; height: 98rpx; display: block; box-sizing: border-box;border-radius: 50rpx;background: linear-gradient(to right, #94cebf, #279454)" bindtap = "announce_release">公告活动发布</button>
+  <button style="position: relative; left: -142rpx; top: -167rpx; width: 184rpx; height: 134rpx; display: block; box-sizing: border-box; border-radius: 50rpx; background: linear-gradient(to right, #94cebf, #279454)" bindtap="announceinfo">公告管理</button>
+  <button style="position: relative; left: 162rpx; top: -301rpx; width: 184rpx; height: 134rpx; display: block; box-sizing: border-box; border-radius: 50rpx; background: linear-gradient(to right, #94cebf, #279454)" bindtap = "activityinfo">活动管理</button>
+</view>
+<view class='toast-box' hidden='{{!ifName}}'>
+        <view class='toastbg'></view>
+        <view class='showToast' style="position: absolute; left: 0rpx; top: -300rpx; width: 600rpx; height: 790rpx; display: block; box-sizing: border-box">
+            <view class='toast-title' style="position: relative; left: 0rpx; top: 0rpx">
+                <text>编辑内容</text>
+            </view>
+            <view class='toast-main' style="position: relative; left: 0rpx; top: 0rpx; width: 600rpx; height: 826rpx; display: block; box-sizing: border-box">
+                <view class='toast-input'>
+                    <input placeholder='请输入标题' bindinput='setValue' data-name='stuEidtName' model:value="{{title}}" ></input>
+
+                </view>
+                <view class="outside">
+                <button bindtap = "inputimg" type="default" style="position: relative; left: -5rpx; top: -15rpx">输入图片</button>
+                <image style="position: relative; left: 2rpx; top: 24rpx; width: 214rpx; height: 190rpx; display: inline-block; box-sizing: border-box" src="{{cluburl}}" bindtap='uploadFace'/>
+               </view>
+                <view class = 'toast-input1'>                    
+                  <textarea style="position: relative; left: 2rpx; top: 0rpx; width: 418rpx; height: 312rpx; display: block; box-sizing: border-box" class="input" name="remark" placeholder="请输入编辑内容" auto-focus="true"  model:value="{{content}}"/>
+                </view>
+                <view class="section section_gap">
+  <view class="weui-cells weui-cells_after-title">
+    <radio-group bindchange="radioChange">
+      <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+        <view>{{item.value}}</view>
+      </radio>
+    </radio-group>
+  </view>
+</view>
+            </view>
+            <view class='toast-button'>
+                <view class='button1' style="width: 263rpx; height: 94rpx; display: block; box-sizing: border-box">
+                    <button catchtap='cancel' bindtap = "cancel" style="width: 300rpx; height: 94rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; position: relative">取消</button>
+                </view>
+                <view class='button2'>
+                    <button catchtap='confirm' bindtap="confirm" style="width: 300rpx; height: 94rpx; display: block; box-sizing: border-box; left: 40rpx; top: 0rpx; position: relative">确定</button>
+                </view>
+            </view>
+        </view>
+</view>

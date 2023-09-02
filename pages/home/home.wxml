@@ -1,0 +1,68 @@
+<!--pages/home/home.wxml-->
+<swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" circular="true" previous-margin="10" next-margin="10">
+  <swiper-item class="banneritem">
+    <image class="img2" 
+    src="cloud://club-manager-3ghmftue4e9f0d99.636c-club-manager-3ghmftue4e9f0d99-1302029001/userhome_scroll/cd0ecb5f6c123c0b505a82fb639eb4a.jpg" mode="widthFix" show-menu-by-longpress="true">
+    </image>
+  </swiper-item>
+  <swiper-item class="banneritem">
+    <image class="img2" 
+    src="cloud://club-manager-3ghmftue4e9f0d99.636c-club-manager-3ghmftue4e9f0d99-1302029001/userhome_scroll/cd0ecb5f6c123c0b505a82fb639eb4a.jpg" mode="widthFix" show-menu-by-longpress="true">
+    </image>
+  </swiper-item>
+  <swiper-item class="banneritem">
+    <image class="img2" 
+    src="cloud://club-manager-3ghmftue4e9f0d99.636c-club-manager-3ghmftue4e9f0d99-1302029001/userhome_scroll/cd0ecb5f6c123c0b505a82fb639eb4a.jpg" mode="widthFix" show-menu-by-longpress="true">
+    </image>
+  </swiper-item>
+</swiper>
+
+
+<view style="margin-top: 10%;"></view>
+<view class="center" style="height: 30rpx;">
+  <view>用户名</view>
+</view>
+
+<view class="outside">
+  <input bindinput="userInput" class="inside" type="number" required="required" model:value="{{name}}" name="input" placeholder="请输入用户名"/>
+</view>
+
+<view class="center" style="height: 30rpx;">
+  <view>密码</view>
+</view>
+<view class="outside">
+  <input  bindinput="psdInput" class="inside" type="string" required="required" name="input"   model:value="{{number}}"  password="{{!open}}" placeholder="请输入密码"/>
+</view>
+
+<view class="error">
+  <view class="center" style="height: 30rpx;">
+    <text style="margin-left: auto;margin-right: auto;color: red;">{{prompt}}</text>
+</view>
+</view>
+
+<view class="psdBox" style="width: 746rpx; height: 68rpx; display: block; box-sizing: border-box">
+    <checkbox-group bindchange="onChange" style="display: flex; align-items: center; justify-content: center; margin-top: 10%; width: 372rpx; height: 64rpx; box-sizing: border-box">
+      <checkbox value="1" checked="{{formData.checked}}" />
+      <label for="check">记住密码</label>
+    </checkbox-group>
+    <button bindtap = "recover" plain="true" class="recover_btn" size="mini" style="position: relative; left: 440rpx; top: -64rpx">找回密码</button>
+</view>
+
+<view style="justify-content: center;"></view>
+<view class="section section_gap">
+  <view class="weui-cells weui-cells_after-title">
+    <radio-group bindchange="radioChange" style="display: flex; align-items: center; justify-content: center; width: 750rpx; height: 156rpx; box-sizing: border-box">
+      <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+        <view>{{item.value}}</view>
+      </radio>
+    </radio-group>
+  </view>
+</view>
+
+
+
+<view class="s_view" style="margin-top: 110%;">
+  <button bindtap = "login" class="login_btn" size="mini">登录</button>
+  <button bindtap = "register" class="register_btn" size="mini">注册</button>
+</view>
+

@@ -1,0 +1,59 @@
+<!--个人信息-->
+<view style="position: relative; width: 750rpx; background: #088a6e; height: 368rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+  <text style="position: absolute; left: 316rpx; top: 45rpx">姓名：{{name}}</text>
+
+  <text style="position: absolute; left: 316rpx; top: 120rpx">性别：{{sex}}</text>
+
+  <text style="position: absolute; left: 316rpx; top: 195rpx">年级：{{grade}}</text>
+
+  <text style="position: absolute; left: 316rpx; top: 270rpx">学院：{{major}}</text>
+</view>
+<image style="position: relative; left: 33rpx; top: -306rpx; width: 256rpx; height: 244rpx; display: inline-block; box-sizing: border-box" src="{{faceUrl}}" bindtap='uploadFace' />
+<!--功能按钮-->
+<view style="position: relative; width: 750rpx; background: #088a6e; height: 405rpx; display: block; box-sizing: border-box; left: 0rpx; top: -211rpx">
+  <view style="height: 5rpx;"></view>
+  <button style="display: flex;width: 100%;margin-top:5rpx;margin-bottom: 5rpx;" bindtap="click1">
+    <image src="/images/a.jpeg" style="display: flex;margin-right: 10rpx;height: 50rpx;width: 50rpx;"></image>
+    我的报名
+  </button>
+  <button style="display: flex;width: 100%;margin-top:5rpx;margin-bottom: 5rpx;" bindtap="click2">
+    <image src="/images/b.jpeg" style="display: flex;margin-right: 10rpx;height: 50rpx;width: 50rpx;"></image>
+    我的社团
+  </button>
+  <button style="display: flex;width: 100%;margin-top:5rpx;margin-bottom: 5rpx;" bindtap="click3">
+    <image src="/images/c.jpeg" style="display: flex;margin-right: 10rpx;height: 50rpx;width: 50rpx;"></image>
+    我的收藏
+  </button>
+  <button style="display: flex;width: 100%;margin-top:5rpx;margin-bottom: 5rpx" bindtap="click4">
+    <image src="/images/d.jpeg" style="display: flex;margin-right: 10rpx;height: 50rpx;width: 50rpx;"></image>
+    历史记录
+  </button>
+  <button style="display: flex;width: 100%;margin-top:5rpx;margin-bottom: 5rpx;" bindtap="openpopup" data-index="5">
+    <image src="/images/e.jpeg" style="display: flex;margin-right: 10rpx;height: 50rpx;width: 50rpx;"></image>
+    退出登录
+  </button>
+  <view style="width: 100%;height: 5rpx;background-color: #088a6e;"></view>
+</view>
+<!--退出登陆弹窗-->
+<view class="popup-box" wx:if="{{showIndex=='5'}}" bindtap="closepopup"></view> 
+<view class="info-center"
+wx:if="{{showIndex=='5'}}">
+  <view>
+    <view class="row-info">
+      <view>
+        <text class="line left-line"></text>
+        <text>友情提示</text>
+        <text class="line right-line"></text>
+      </view>
+      <text style="font-size: large;">是否确认退出？</text>
+    </view>
+    <view class="row-btn">
+      <view class="left-btn" bindtap="closepopup">取消</view>
+      <view class="right-btn" bindtap="back">确认</view>
+    </view>
+  </view>
+</view>
+
+
+
+

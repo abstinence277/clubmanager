@@ -1,0 +1,52 @@
+{
+
+  "pages":[
+    "pages/home/home", 
+    "pages/article/article",
+    "pages/home_recover/home_recover",
+    "pages/sign_up_activity_detail/sign_up_activity_detail",
+    "pages/user_space/user_space", 
+    "pages/myclub/myclub",
+    "pages/club_check/club_check",
+    "pages/club_member/club_member",
+    "pages/club_announceinfo/club_announceinfo",
+    "pages/club_activityinfo/club_activityinfo",
+    "pages/myfavour/myfavour",
+    "pages/myhistory/myhistory",
+    "pages/user_index/user_index",
+    "pages/user_home/user_home",
+    "pages/user_club_info_detail/user_club_info_detail",
+    "pages/myregister/myregister",
+    "pages/register_home/register_home", 
+    "pages/login_home/login_home",
+    "pages/index/index",
+    "pages/user_club_info/user_club_info",
+    "pages/club_info/club_info",
+    "pages/sign_up_club/sign_up_club",
+    "pages/sign_up_activity/sign_up_activity",
+    "pages/club_index/club_index",
+    "pages/club_home/club_home",
+    "pages/club_func/club_func",
+    "pages/club_space/club_space",
+    "pages/manager_index/manager_index",
+    "pages/manager_home/manager_home",
+    "pages/manager_club_news/manager_club_news", 
+    "pages/manager_club_managing/manager_club_managing",
+    "pages/manager_activity/manager_activity",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationStyle": "default",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "高校社团招新和管理系统",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  }
+
+
+}

@@ -1,0 +1,32 @@
+<!--pages/club_check/club_check.wxml-->
+<!--pages/wxCase/checkbox/index.wxml-->
+<scroll-view scroll-x>
+  <view class="head head1">
+    <view>
+      <checkbox checked="{{select_all}}"  bindtap="selectall" />
+    </view>
+    <view>姓名</view>
+    <view>学号</view>
+    <view>性别</view>
+    <view>学院</view>
+  </view>
+  <view class="con">
+    <checkbox-group bindchange="checkboxChange">
+      <block wx:for="{{list}}" wx:key="index">
+        <view class="head">
+          <view>
+            <checkbox value="{{item.number}}" checked="{{item.checked}}" />
+          </view>
+          <view>{{item.name}}</view>
+          <view>{{item.number}}</view>
+          <view>{{item.sex}}</view>
+          <view>{{item.college}}</view>
+        </view>
+      </block>
+    </checkbox-group>
+  </view>
+</scroll-view>
+
+<view class="s_view" style="margin-top: 100%;">
+  <button bindtap = "confirm" class="login_btn" size="mini" style="position: relative; left: -162rpx; top: -75rpx; width: 303rpx; height: 97rpx; display: block; box-sizing: border-box">确认入社</button>
+</view>

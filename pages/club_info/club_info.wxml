@@ -1,0 +1,38 @@
+<!--pages/club_info/club_info.wxml-->
+
+
+<!--搜索栏-->
+<view>
+     <view>
+        <view class="search-bar">
+            <view class="search-bar_form">
+            <!-- 可编辑时的搜索框 -->
+                <view class="search-bar_box">
+                    <icon class="icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="search-bar_input" placeholder="搜索社团" bindconfirm="goSearch" value="{{userSearch}}"/>
+                </view>
+                <!-- 最初的搜索框 -->
+                <label class="search-bar_label" hidden="{{inputShowed}}" bindtap="showInput" >
+                    <icon class="icon-search" type="search" size="14"></icon>
+                    <view class="search-bar_text">搜索</view>
+                </label>
+            </view>
+            <!-- 取消搜索 -->
+            <view class="search-bar_cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+    </view>
+</view>
+
+<!--文章展示-->
+
+<scroll-view class="scroll-wrapper" scroll-y scroll-with-animation="true" style="height: 90%; width: 750rpx; display: block; box-sizing: border-box">
+	<view class="navigate-item" wx:for="{{searchList}}" bindtap="showArticle" data-name="{{searchList[index].name}}">
+		<view style="width: 100%; background: #ddf8f0; height: 200rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 5rpx;">
+      <image style="position: relative; width: 247rpx; height: 167rpx; display: inline-block; box-sizing: border-box; left: 504rpx; top: 17rpx" src="{{'cloud://club-manager-3ghmftue4e9f0d99.636c-club-manager-3ghmftue4e9f0d99-1302029001/club/'+searchList[index].ID+'.jpg'}}" />
+      <text style="position: absolute; left: 30rpx; top: 30rpx">社团名称：{{searchList[index].name}}</text>
+      <text class="introtext" style="font-size: small;position: absolute; left: 30rpx; top: 80rpx">社团简介：{{searchList[index].intro}}</text>
+      <text style="font-size: small;position: absolute; left: 30rpx; top: 130rpx">成立时间：{{searchList[index].found}}</text>
+    </view>
+    <view style="font-size:10rpx;"><text decode="true">&nbsp;</text></view>
+	</view>
+</scroll-view>

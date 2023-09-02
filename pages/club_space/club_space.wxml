@@ -1,0 +1,49 @@
+<!--pages/club_space/club_space.wxml-->
+<text style="position: relative; left: 299rpx; top: -308rpx">社团团徽</text>
+<image style="position: relative; left: 27rpx; top: 127rpx; width: 392rpx; height: 387rpx; display: inline-block; box-sizing: border-box" src="{{cluburl}}" bindtap='uploadFace'/>
+
+<view style="position: absolute; width: 750rpx; background: #088a6e; height:300rpx; display: block; box-sizing: border-box; left: 0rpx; top: 40%">
+  <view style="height: 5rpx;"></view>
+  <button style="display: flex;width: 100%;margin-top:5rpx;margin-bottom: 5rpx;" bindtap="imgchange">
+    <image src="/images/a.jpeg" style="display: flex;margin-right: 10rpx;height: 50rpx;width: 50rpx;"></image>
+    修改团徽
+  </button>
+  <button style="display: flex;width: 100%;margin-top:5rpx;margin-bottom: 5rpx;" bindtap="pwdchange">
+    <image src="/images/a.jpeg" style="display: flex;margin-right: 10rpx;height: 50rpx;width: 50rpx;"></image>
+    修改密码
+  </button>
+  <button style="display: flex;width: 100%;margin-top:5rpx;margin-bottom: 5rpx;" bindtap="distory">
+    <image src="/images/c.jpeg" style="display: flex;margin-right: 10rpx;height: 50rpx;width: 50rpx;"></image>
+    注销社团
+  </button>
+  <button style="display: flex;width: 100%;margin-top:5rpx;margin-bottom: 5rpx;" bindtap="logout" data-index="5">
+    <image src="/images/e.jpeg" style="display: flex;margin-right: 10rpx;height: 50rpx;width: 50rpx;"></image>
+    退出登录
+  </button>
+  <view style="width: 100%;height: 5rpx;background-color: #088a6e;"></view>
+</view>
+<view class='toast-box' hidden='{{!ifName}}'>
+        <view class='toastbg'></view>
+        <view class='showToast'>
+            <view class='toast-title'>
+                <text>修改密码</text>
+            </view>
+            <view class='toast-main'>
+                <view class='toast-input'>
+                    <input placeholder='请输入密码' bindinput='setValue' data-name='stuEidtName' model:value="{{pwd1}}" password="{{!open}}"></input>
+
+                </view>
+                <view class = 'toast-input1'>                    
+                <input placeholder='请确认密码' bindinput='setValue1' data-name='stuEidtName' model:value="{{pwd2}}" password="{{!open}}"></input>
+                </view>
+            </view>
+            <view class='toast-button'>
+                <view class='button1'>
+                    <button catchtap='cancel' bindtap = "cancel">取消</button>
+                </view>
+                <view class='button2'>
+                    <button catchtap='confirm' bindtap="confirm">确定</button>
+                </view>
+            </view>
+        </view>
+</view>

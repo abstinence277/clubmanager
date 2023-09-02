@@ -1,0 +1,66 @@
+<!--pages/home/home.wxml-->
+
+<swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" circular="true" previous-margin="10" next-margin="10">
+  <swiper-item class="banneritem">
+    <image class="img2" 
+    src="https://bkimg.cdn.bcebos.com/pic/77c6a7efce1b9d16fdfaf7c8ee8aa38f8c5494eece44?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5" mode="widthFix" show-menu-by-longpress="true">
+    </image>
+  </swiper-item>
+  <swiper-item class="banneritem">
+    <image class="img2" 
+    src="https://bkimg.cdn.bcebos.com/pic/77c6a7efce1b9d16fdfaf7c8ee8aa38f8c5494eece44?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5" mode="widthFix" show-menu-by-longpress="true">
+    </image>
+  </swiper-item>
+  <swiper-item class="banneritem">
+    <image class="img2" 
+    src="https://bkimg.cdn.bcebos.com/pic/77c6a7efce1b9d16fdfaf7c8ee8aa38f8c5494eece44?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5" mode="widthFix" show-menu-by-longpress="true">
+    </image>
+  </swiper-item>
+</swiper>
+
+<form catchsubmit="formSubmit" catchreset="formReset"> 
+<view style="margin-top: 15%;"></view>
+<view class="center" style="height: 30px;">
+  <view>用户名</view>
+</view>
+
+<view class="outside">
+  <input class="inside" type="number" maxlength="13" cursor-spacing="180px" required="required" model:value="{{name}}" bindinput="inpname" name="input" placeholder="请输入用户名"/>
+</view>
+
+<view class="center" style="height: 30px;">
+  <view>密码</view>
+</view>
+
+<view class="outside">
+  <input class="inside" type="string" maxlength="8" password="{{!open}}" cursor-spacing="180px"  model:value="{{number}}" bindinput="inpnumber" required="required" name="input" placeholder="请输入密码"/>
+</view>
+
+<view class="center" style="height: 30px;">
+  <view>确认密码</view>
+</view>
+
+<view class="outside">
+  <input class="inside" type="string" maxlength="8" password="{{!open}}" cursor-spacing="180px"   model:value="{{password}}" bindinput="inputpassword" required="required" name="input" placeholder="请再次输入密码"/>
+</view>
+<view class="center" style="height: 30px;">
+  <view>密码保护问题</view>
+</view>
+<view class="outside">
+  <input class="inside" type="text" cursor-spacing="180px"   model:value="{{question}}" bindinput="inputpassword" required="required" name="input" placeholder="请输入密保问题"/>
+</view>
+<view class="center" style="height: 30px;">
+  <view>密码保护问题答案</view>
+</view>
+<view class="outside">
+  <input class="inside" type="text"  cursor-spacing="180px"   model:value="{{answer}}" bindinput="inputpassword" required="required" name="input" placeholder="请输入密保问题的答案"/>
+</view>
+<view style="margin-top: 10%;"></view>
+<button bindtap = "addData" type = "primary">注册</button>
+<button bindtap = "reset" type = "default" form-type="reset">清空</button>
+</form>
+<view class="error">
+  <view class="center" style="height: 30px;">
+    <text style="margin-left: auto;margin-right: auto;color: red;">{{prompt}}</text>
+  </view>
+</view>

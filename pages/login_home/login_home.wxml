@@ -1,0 +1,46 @@
+<!--pages/login_home/login_home.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <text class="page__title"></text>
+        <text class="page__desc">身份选择</text>
+    </view>
+    <view class="page__bd">
+        <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+                <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                    <text>{{item.value}}</text>
+                </radio>
+            </radio-group>
+        </view>
+    </view>
+
+    <view class="container">
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+
+
+      <view class="page-section">
+        <view class="page-section-user">用户名</view>
+            <view class="weui-cell__bd" style="margin: 30rpx 0" >
+              <input class="weui-input-user" name="input" placeholder="请输入用户名" />
+            </view>
+
+            <view class="page-section-pas">密码</view>
+            <view class="weui-cell__bd" style="margin: 30rpx 0" >
+              <input class="weui-input-pas" name="input" placeholder="请输入密码" />
+            </view>
+
+      </view>
+
+      <view class="btn-area">
+        <button style="margin: 30rpx 0" type="primary" formType="submit">Submit</button>
+        <button style="margin: 30rpx 0" formType="reset">Reset</button>
+      </view>
+
+    </form>
+  </view>
+
+</view>
+      
+
+</view>

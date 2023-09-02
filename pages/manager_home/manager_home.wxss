@@ -1,0 +1,7 @@
+/* pages/manager_home/manager_home.wxss */
+.banner{width: 750rpx;height: 750rpx;}
+.ctn{width: 750rpx;height: 750rpx;}
+.canvas{
+  width: 750rpx;
+  height: 500rpx;
+}

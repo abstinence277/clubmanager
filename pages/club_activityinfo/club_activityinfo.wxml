@@ -1,0 +1,32 @@
+<!--pages/club_announceinfo/club_announceinfo.wxml-->
+<!--pages/club_check/club_check.wxml-->
+<!--pages/wxCase/checkbox/index.wxml-->
+<scroll-view scroll-x>
+  <view class="head head1">
+    <view>
+      <checkbox checked="{{select_all}}"  bindtap="selectall" />
+    </view>
+    <view>标题</view>
+    <view>日期</view>
+    <view>状态</view>
+  </view>
+  <view class="con">
+    <checkbox-group bindchange="checkboxChange">
+      <block wx:for="{{list}}" wx:key="index">
+        <view class="head">
+          <view>
+            <checkbox value="{{item.title}}" checked="{{item.checked}}" />
+          </view>
+          <view>{{item.title}}</view>
+          <view>{{item.date}}</view>
+          <view>{{item.state}}</view>
+        </view>
+      </block>
+    </checkbox-group>
+  </view>
+</scroll-view>
+<view class="s_view" style="margin-top: 100%;">
+  <button bindtap = "confirm" class="login_btn" size="mini" style="position: relative; left: -162rpx; top: -75rpx; width: 303rpx; height: 97rpx; display: block; box-sizing: border-box">刷新</button>
+  <button bindtap = "output" class="login_btn" size="mini" style="position: relative; left: -162rpx; top: -75rpx; width: 303rpx; height: 97rpx; display: block; box-sizing: border-box">导出</button>
+</view>
+

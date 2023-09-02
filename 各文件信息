@@ -1,0 +1,36 @@
+home：主界面
+  register_home：注册
+  login_home：登陆
+  home_recover：找回密码
+user_index：大厅、社团公告、我的 
+  user_home：大厅                        
+    club_info：社团简介     
+      article：文章                        
+    sign_up_club：招新报名
+    sign_up_activity：活动报名
+      sign_up_activity_detail：文章
+  user_club_info：社团公告
+    user_club_info_detail：文章
+  user_space：我的
+    myregister：我的报名
+    myclub：我的社团
+    myfavour：我的收藏
+    myhistory：历史记录
+index：获取头像
+
+
+club_index:信息总览、功能管理、空间
+  club_home：信息总览
+  club_func：功能管理
+    club_check：审核招新
+    club_member:社员信息
+    club_announceinfo:公告管理
+    club_activityinfo:活动管理
+  club_space：空间
+    "pages/logs/logs",
+
+manager_index:信息总览、功能管理
+  manager_home：信息总览
+  manager_club_news：功能管理
+    manager_club_managing：社团管理
+    manager_activity：活动管理

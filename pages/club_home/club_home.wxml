@@ -1,0 +1,29 @@
+
+<view class = "view1"></view>
+<view class="view2"></view>
+<view class = "box"  style="position: relative; width: 750rpx; height: 343rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+  <image src='/images/club.jpeg' style="width: 750rpx; height: 910rpx; display: inline-block; box-sizing: border-box"></image>
+  <view style="position: absolute; display: flex; align-items: center; justify-content: center; top: 121rpx; width: 316rpx; height: 50rpx; box-sizing: border-box; left: 217rpx; border-style: solid; border-width: 3rpx; border-color: green">社团统计信息总览</view>
+  <!--<text style="position: relative; left: 75rpx; top: 40rpx">{{name}}</text>-->
+  <view style="position: absolute; display: flex; align-items: center; justify-content: center; top: 200rpx; width: 750rpx; height: 50rpx; box-sizing: border-box; left: 0rpx">社团名称：{{name}}</view>
+  <!--<text style="position: relative; left: 75rpx; top: 40rpx">{{name}}</text>-->
+  <view style="position: absolute; display: flex; align-items: center; justify-content: center; top: 300rpx; width: 750rpx; height: 50rpx; box-sizing: border-box; left: 0rpx">社团成立时间：{{time}}</view>
+  <!--<text>{{time}}</text>-->
+  <view style="position: absolute; display: flex; align-items: center; justify-content: center; top: 400rpx; width: 750rpx; height: 50rpx; box-sizing: border-box; left: 0rpx">社团总人数：{{people}}</view>
+  <!--<text>{{people}}</text>-->
+  
+  
+</view>
+
+<view class="s_view" style="margin-top: 100%; position: fixed; left: -70rpx; top: 462rpx">
+<button bindtap = "sub" class="login_btn" size="mini" style="position: relative; left: -82rpx; top: 26rpx; width: 266rpx; height: 64rpx; display: block; box-sizing: border-box" type = "primary">提交编辑</button>
+<button bindtap = "reset" class="login_btn" size="mini" style="position: relative; left: -82rpx; top: 26rpx; width: 266rpx; height: 64rpx; display: block; box-sizing: border-box" type = "primary">刷新</button>
+</view>
+
+
+<canvas style="width: 620rpx; height: 438rpx; margin-top: 20px; position: relative; left: 57rpx; top: 91rpx; display: block; box-sizing: border-box" canvas-id="pieCanvas" id="pieCanvas" bindtouchstart="touchStart"></canvas>
+
+<text style="position: relative; left: 279rpx; top: 66rpx">编辑社团简介</text>
+<textarea style="position: relative; left: 16rpx; top: 74rpx; width: 700rpx; height: 282rpx; display: block; box-sizing: border-box" class="input" name="remark" placeholder="请输入编辑内容" auto-focus="true"  model:value="{{announce}}"/>
+
+ 

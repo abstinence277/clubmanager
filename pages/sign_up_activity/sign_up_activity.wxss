@@ -1,0 +1,82 @@
+/* pages/club_info/club_info.wxss */
+/* navigationBar.wxss */
+.search{
+  width: 98%;
+}
+
+.search-bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #EFEFF4;
+  border-top: 1rpx solid #D7D6DC;
+  border-bottom: 1rpx solid #D7D6DC;
+}
+.icon-search {
+  margin-right: 4px;
+  font-size: inherit;
+}
+.icon-search_in-box { /*搜索图标*/
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+.search-bar_text {/*搜索*/
+  display: inline-block;
+  font-size: 16px;
+}
+.search-bar_form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+          flex: auto;
+  border-radius: 5px;
+  background: #FFFFFF;
+  border: 1rpx solid #E6E6EA;
+}
+.search-bar_box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.search-bar_input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.search-bar_label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 3px;
+  text-align: center;
+  color: #9B9B9B;
+  background: #FFFFFF;
+  line-height: 28px;
+}
+.search-bar_cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09BB07;
+  white-space: nowrap;
+}
+.scroll-wrapper{
+  position: fixed;
+  top:100rpx;
+  height: 1100rpx;
+}
+.introtext{
+  width: 400rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}

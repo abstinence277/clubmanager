@@ -1,0 +1,44 @@
+<!--pages/manager_club_managing/manager_club_managing.wxml-->
+<view style="position: relative; left: 0rpx; top: 57rpx">
+
+  <scroll-view scroll-x scroll-y>
+  <view class="head head1">
+    <view>
+      <checkbox checked="{{select_all}}"  bindtap="selectall" />
+    </view>
+    <view>社团ID</view>
+    <view>社团名称</view>
+    <view>社团简介</view>
+  </view>
+  <view class="con">
+    <checkbox-group bindchange="checkboxChange">
+      <block wx:for="{{list}}" wx:key="index">
+        <view class="head">
+          <view>
+            <checkbox value="{{item.ID}}" checked="{{item.checked}}" />
+          </view>
+          <view>{{item.ID}}</view>
+          <view>{{item.club_name}}</view>
+          <view>{{item.introduction}}</view>
+        </view>
+      </block>
+    </checkbox-group>
+  </view>
+  </scroll-view>
+
+  <input style="width: 450rpx; height: 75rpx; display: block; box-sizing: border-box; position: relative; left: 262rpx; top: 106rpx" class="input" placeholder="请输入社团名称" placeholder-style='color:red' type="text" required="required" name="input" model:value="{{clubname}}"/>
+  <text class="te" style="position: relative; left: 66rpx; top: 44rpx">社团名称</text>
+  <text class="te" style="position: relative; left: 66rpx; top: 148rpx;color: red;">{{info}}</text>
+</view>
+<view>
+  <button style="position: relative; left: -170rpx; top: 356rpx; width: 248rpx; height: 92rpx; display: block; box-sizing: border-box" type="primary" bindtap="newclub">添加社团</button>
+  <button style="position: relative; left: 148rpx; top: 264rpx; width: 248rpx; height: 92rpx; display: block; box-sizing: border-box" type="primary" bindtap="delclub">删除社团</button>
+</view>
+
+
+
+
+        
+      
+
+

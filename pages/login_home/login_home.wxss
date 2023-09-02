@@ -1,0 +1,9 @@
+/* pages/login_home/login_home.wxss */
+.radio-group {
+  border-bottom: 1px solid #ddd;
+}
+.radio {
+  display: block;
+  border-top: 1px solid #ddd;
+  padding: 5px;
+}

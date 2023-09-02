@@ -1,0 +1,59 @@
+<!--导航条--> 
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view> 
+ 
+<!----> 
+<view hidden="{{currentTab!==0}}"> 
+  <scroll-view scroll-y="true" style="height: 1100rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <!--展示信息--> 
+    <view wx:for="{{result}}">
+      <view style="width: 750rpx; background: #ddf8f0; height: 200rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx">
+        <image style="position: relative; width: 247rpx; height: 167rpx; display: inline-block; box-sizing: border-box; left: 504rpx; top: 17rpx" src="https://mmbiz.qpic.cn/mmbiz_png/icTdbqWNOwNQ0ia79enzYJBsZ3CIkLQGe39qeOxbpT9oM9KaCthzBa0PF75xzBGjZQGlM69TDggxpNX7ACibCjjtw/0?wx_fmt=png&t=1614824466" />
+        <text style="position: absolute; left: 30rpx; top: 30rpx">报名名称：{{item.an_title}}</text>
+        <text style="font-size: small;position: absolute; left: 30rpx; top: 80rpx">报名时间：{{item.time}}</text>
+        <text wx:if="{{item.state==0}}" style="font-size: small;position: absolute; left: 30rpx; top: 130rpx">状态：未处理</text>
+        <text wx:elif="{{item.state==1}}" style="font-size: small;position: absolute; left: 30rpx; top: 130rpx">状态：已通过</text>
+        <text wx:else style="font-size: small;position: absolute; left: 30rpx; top: 130rpx">状态：已拒绝</text>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>
+
+ 
+<!----> 
+<view hidden="{{currentTab!==1}}"> 
+  <scroll-view scroll-y="true" style="height: 1100rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+    <view wx:for="{{result}}">
+      <view wx:if="{{item.state!=0}}" style="width: 750rpx; background: #ddf8f0; height: 200rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx">
+        <image style="position: relative; width: 247rpx; height: 167rpx; display: inline-block; box-sizing: border-box; left: 504rpx; top: 17rpx" src="https://mmbiz.qpic.cn/mmbiz_png/icTdbqWNOwNQ0ia79enzYJBsZ3CIkLQGe39qeOxbpT9oM9KaCthzBa0PF75xzBGjZQGlM69TDggxpNX7ACibCjjtw/0?wx_fmt=png&t=1614824466" />
+        <text style="position: absolute; left: 30rpx; top: 30rpx">报名名称：{{item.an_title}}</text>
+        <text style="font-size: small;position: absolute; left: 30rpx; top: 80rpx">报名时间：{{item.time}}</text>
+        <text wx:if="{{item.state==1}}" style="font-size: small;position: absolute; left: 30rpx; top: 130rpx">状态：已通过</text>
+        <text wx:else style="font-size: small;position: absolute; left: 30rpx; top: 130rpx">状态：已拒绝</text>
+      </view>
+    </view>
+
+  </scroll-view>
+
+</view>
+ 
+<!----> 
+<view hidden="{{currentTab!==2}}"> 
+  <scroll-view scroll-y="true" style="height: 1100rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view wx:for="{{result}}">
+      <view wx:if="{{item.state==0}}" style="width: 750rpx; background: #ddf8f0; height: 200rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx">
+        <image style="position: relative; width: 247rpx; height: 167rpx; display: inline-block; box-sizing: border-box; left: 504rpx; top: 17rpx" src="https://mmbiz.qpic.cn/mmbiz_png/icTdbqWNOwNQ0ia79enzYJBsZ3CIkLQGe39qeOxbpT9oM9KaCthzBa0PF75xzBGjZQGlM69TDggxpNX7ACibCjjtw/0?wx_fmt=png&t=1614824466" />
+        <text style="position: absolute; left: 30rpx; top: 30rpx">报名名称：{{item.an_title}}</text>
+        <text style="font-size: small;position: absolute; left: 30rpx; top: 80rpx">报名时间：{{item.time}}</text>
+        <text style="font-size: small;position: absolute; left: 30rpx; top: 130rpx">状态：未处理</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+
+
+

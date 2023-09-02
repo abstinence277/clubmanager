@@ -1,0 +1,20 @@
+<view style="position: fixed; width: 750rpx; background: #ddf8f0; height: 289rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+
+
+  <image style="position: fixed; width: 256rpx; height: 256rpx; display: block; box-sizing: border-box; left: 26rpx; top: 17rpx" src="{{'cloud://club-manager-3ghmftue4e9f0d99.636c-club-manager-3ghmftue4e9f0d99-1302029001/club/'+id+'.jpg'}}" />
+
+  <text style="position: fixed; left: 324rpx; top: 47rpx">社团名称：{{club_name}}</text>
+
+  <text style="position: fixed; left: 324rpx; top: 145rpx">成立时间：{{club_found}}</text>
+</view>
+<scroll-view style="position: fixed; width: 750rpx; background: #ddf8f0; height: 69%; left: 0rpx; top: 310rpx; display: block; box-sizing: border-box">
+  <text style="word-break: break-all;">社团介绍：{{club_intro}}</text>
+
+
+</scroll-view>
+<text style="position: fixed; left: 322rpx; top: 95%;"bindtap="LikeOrNot">{{like}}</text>
+
+
+
+
+

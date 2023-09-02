@@ -1,0 +1,83 @@
+<!--pages/home/home.wxml-->
+<swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" circular="true" previous-margin="10" next-margin="10">
+  <swiper-item class="banneritem">
+    <image class="img2" 
+    src="https://bkimg.cdn.bcebos.com/pic/77c6a7efce1b9d16fdfaf7c8ee8aa38f8c5494eece44?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5" mode="widthFix" show-menu-by-longpress="true">
+    </image>
+  </swiper-item>
+  <swiper-item class="banneritem">
+    <image class="img2" 
+    src="https://bkimg.cdn.bcebos.com/pic/77c6a7efce1b9d16fdfaf7c8ee8aa38f8c5494eece44?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5" mode="widthFix" show-menu-by-longpress="true">
+    </image>
+  </swiper-item>
+  <swiper-item class="banneritem">
+    <image class="img2" 
+    src="https://bkimg.cdn.bcebos.com/pic/77c6a7efce1b9d16fdfaf7c8ee8aa38f8c5494eece44?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UyNzI=,g_7,xp_5,yp_5" mode="widthFix" show-menu-by-longpress="true">
+    </image>
+  </swiper-item>
+</swiper>
+
+
+
+<view style="margin-top: 15%;"></view>
+<view style="margin-top: 15%;"></view>
+<view class="center" style="height: 30px;">
+  <view>请输入你的账号</view>
+</view>
+
+<view class="outside">
+  <input class="inside" type="text" required="required" model:value="{{account}}" name="input" placeholder="请输入你的账号"/>
+</view>
+<view class="center" style="height: 30px;">
+  <view>{{prompt1}}</view>
+</view>
+
+<view class="outside">
+  <input class="inside" type="text" required="required" model:value="{{question}}" name="input" />
+</view>
+
+<view class="center" style="height: 30px;">
+  <view>{{prompt2}}</view>
+</view>
+
+<view class="outside">
+  <input class="inside" type="text" required="required" name="input"   model:value="{{answer}}" />
+</view>
+
+<view class="error">
+  <view class="center" style="height: 154rpx; width: 750rpx; display: block; box-sizing: border-box">
+    <text style="margin-left: auto;margin-right: auto;color: red;">{{prompt}}</text>
+</view>
+</view>
+<view class="s_view" style="margin-top: 100%; position: fixed; left: 44rpx; top: 439rpx; width: 620rpx; height: 60rpx; display: flex; box-sizing: border-box">
+<button bindtap = "submit" type="primary" class="login_btn" size="mini" style="position: relative; left: -167rpx; top: -80rpx">提交</button>
+<button bindtap = "sub" type="primary" class="login_btn" size="mini" style="position: relative; left: -167rpx; top: -80rpx">提交账号</button>
+</view>
+<view class='toast-box' hidden='{{!ifName}}'>
+        <view class='toastbg'></view>
+        <view class='showToast'>
+            <view class='toast-title'>
+                <text>修改密码</text>
+            </view>
+            <view class='toast-main'>
+                <view class='toast-input'>
+                    <input placeholder='请输入密码' bindinput='setValue' data-name='stuEidtName' model:value="{{pwd1}}" password="{{!open}}"></input>
+
+                </view>
+                <view class = 'toast-input1'>                    
+                <input placeholder='请确认密码' bindinput='setValue1' data-name='stuEidtName' model:value="{{pwd2}}" password="{{!open}}"></input>
+                </view>
+            </view>
+            <view class='toast-button'>
+                <view class='button1'>
+                    <button catchtap='cancel' bindtap = "cancel" style="width: 263rpx; height: 94rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">取消</button>
+                </view>
+                <view class='button2'>
+                    <button catchtap='confirm' bindtap="confirm" style="width: 263rpx; height: 94rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">确定</button>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "component_1": "/pages/manager_home/manager_home",
+    "component_2": "/pages/manager_club_news/manager_club_news"
+  }
+}

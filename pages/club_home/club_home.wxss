@@ -1,0 +1,27 @@
+/* pages/club_home/club_home.wxss */
+
+.header{width:750rpx;height:150rpx;background: gray;border:1px solid black;}
+.hdCon{display: flex;justify-content: space-between;align-items: center;height: 100%;}
+.hdCon navigator,.hdCon .try{height:100rpx}
+.hdCon image{height:100%}
+.try{position: relative;animation: dh linear 1s infinite alternate;}
+.try .btn{position:absolute;width:100%;height:100%;top:0;left:0;opacity: 0;}
+.banner{width: 750rpx;height: 750rpx;}
+.ctn{width: 750rpx;height: 750rpx;}
+
+.input{
+  /* 边框 */
+  border:1px solid rgb(10, 10, 10);
+  padding: 10rpx;
+  z-index: 0;
+}
+.s_view{
+  position: fixed;
+  width: 90%;
+  margin: 0 25%;
+  display: flex;/* 如果把盒子设置 为弹性盒子,必须要加的 */
+  flex-direction: row;/* 设置一个大盒子内容垂直排列*/
+  align-items: center;/* 设置一个大盒子内容居中排列*/
+  top: 300rpx;
+  z-index: 10; /*注意此处调整组件权重*/
+}

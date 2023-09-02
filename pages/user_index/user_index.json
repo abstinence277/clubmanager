@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "component_1": "/pages/user_home/user_home",
+    "component_2": "/pages/user_club_info/user_club_info",
+    "component_3": "/pages/user_space/user_space"
+  }
+}

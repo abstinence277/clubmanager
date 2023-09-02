@@ -1,0 +1,6 @@
+.club_intro{
+  width: 400rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}

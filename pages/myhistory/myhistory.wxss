@@ -1,0 +1,91 @@
+/* pages/my_history_article/my_history_article.wxss */
+ 
+.an_Box {
+  min-height: 200rpx;
+  margin-bottom: 120rpx;
+  background: #ffffff;
+  overflow: auto;
+  margin-top: 34rpx;
+}
+ 
+.anBox {
+  /*clear: both;*//*margin-top: 15px;*/
+  width: 46%;
+  /* height: 276px; *//*border-right: solid 2px #e5e5e5;
+    border-top: solid 2px #e5e5e5;*/
+  overflow: auto;
+  float: left;
+  background-color: #fff;
+  margin: 0rpx 10rpx 20rpx 20rpx;
+  /*margin-bottom: 15px;*/
+}
+ 
+.anBox:nth-child(even) {
+  border-right: none;
+  width: 46%;
+  margin: 0rpx 10rpx 20rpx 10rpx;
+}
+ 
+.anBox:nth-child(1) {
+  margin-top: 20rpx;
+}
+ 
+.anBox:nth-child(2) {
+  margin-top: 20rpx;
+}
+ 
+.anImg {
+  width: 100%;
+  height: 230rpx;
+  margin: 0 auto;
+}
+ 
+.anImg image {
+  width: 100%;
+  height: 230rpx;
+  margin: 0 auto;
+  /* margin-top: 15px;*/
+}
+ 
+.articlesName {
+  height: 40rpx;
+  padding: 30rpx 40rpx 40rpx 24rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  text-align: left;
+}
+ 
+.articlesMessage {
+  height: 54rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+ 
+.articles {
+  float: left;
+}
+ 
+.club_ID {
+  color: #ec4444;
+  padding-left: 24rpx;
+  font-size: 28rpx;
+}
+ 
+.fan {
+  color: #acacac;
+  font-size: 24rpx;
+  padding-left: 22rpx;
+}
+ 
+.date {
+  
+  color: #acacac;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}

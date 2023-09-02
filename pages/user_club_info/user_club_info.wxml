@@ -1,0 +1,18 @@
+<view class='an_Box'>
+  <view class='anBox' wx:for='{{articles}}' wx:key='{{index}}' wx:if="{{articles.status =='1'}}" wx:for-index="index" wx:for-item="articles" bindtap="getShow" data-id="{{articles.an_id}}">
+    <view class='anImg'>
+      <image src='{{articles.Imgpath}}' />
+    </view>
+    <view class='articlesName'>{{articles.an_title}}</view>
+    <view class='articlesMessage'>
+      <view class='articles'>
+        <text class='club_ID'>{{articles.club_ID}}</text>
+        <text class='date'>{{articles.an_date}}</text>
+      </view>
+    </view>
+  </view>
+  <!--如果查询为空，显示图像-->
+  <view wx:if="{{empty==1}}">
+    <image src='/images/bilibili.jpeg ' style="display: flex; width: 100%; height: 700rpx; box-sizing: border-box; left: 0rpx; top: 0rpx;margin-top:20%"></image>
+  </view>
+</view>

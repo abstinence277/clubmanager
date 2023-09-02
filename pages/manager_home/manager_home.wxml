@@ -1,0 +1,24 @@
+
+<swiper class="ctn" style="width: 750rpx; height: 1392rpx; display: block; box-sizing: border-box">
+  <swiper-item >
+    <image src='/images/slogan.jpeg' style="width: 716rpx; height: 568rpx; display: inline-block; box-sizing: border-box; position: absolute; left: 10rpx; top: 410rpx"></image>
+    <text style="font-size: large; color: black; position: relative; left: 249rpx; top: 66rpx">各学院信息总览</text>
+    <view style="margin-top: 20rpx; border-width: 4rpx; border-style: solid; border-color: green; width: 724rpx; height: 576rpx; display: block; box-sizing: border-box; position: relative; left: 13rpx; top: 332rpx">
+      <scroll-view scroll-y="true" style="height: 300rpx; width: 616rpx; display: block; box-sizing: border-box; position: absolute; left: 41rpx; top: 110rpx" >
+          <canvas canvas-id="zchart"disable-scroll="true" id="zchart" class="canvas" style="position: absolute; left: 0rpx; top: 0rpx; width: 608rpx; height: 327rpx; display: block; box-sizing: border-box"></canvas>
+      </scroll-view>
+    </view>
+    
+  </swiper-item>
+  <swiper-item>
+    <text style="font-size: large; color: black; position: relative; left: 249rpx; top: 66rpx">各社团男女比例</text>
+    <view style="margin-top: 20rpx; border-width: 4rpx; border-style: solid; border-color: green; width: 724rpx; height: 576rpx; display: block; box-sizing: border-box; position: relative; left: 13rpx; top: 332rpx">
+      <scroll-view scroll-y="true" style="height: 586rpx; width: 800rpx; display: block; box-sizing: border-box; position: relative; left: -4rpx; top: -15rpx" >
+      <image src='/images/slogan.jpeg' style="width: 716rpx; height: 568rpx; display: inline-block; box-sizing: border-box; position: relative; left: 5rpx; top: 18rpx"></image>
+      <canvas style="position: relative; left: 40rpx; top: -450rpx; width: 650rpx; height: 300rpx; display: block; box-sizing: border-box" canvas-id="pieCanvas" id="pieCanvas" bindtouchstart="touchStart" model:value="{{clubname}}"></canvas>
+      </scroll-view>
+    </view>
+  </swiper-item>
+</swiper>
+
+<button bindtap="test" type="primary" size="mini" style="position: relative; left: 0rpx; top: -1176rpx; width: 184rpx; height: 58rpx; display: block; box-sizing: border-box">点击查询</button>

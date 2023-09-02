@@ -1,0 +1,99 @@
+<!--pages/club_info/club_info.wxml-->
+
+
+<!--搜索栏-->
+<view>
+     <view>
+        <view class="search-bar">
+            <view class="search-bar_form">
+            <!-- 可编辑时的搜索框 -->
+                <view class="search-bar_box">
+                    <icon class="icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="search-bar_input" placeholder="搜索文章" bindconfirm="goSearch" value="{{userSearch}}"/>
+                </view>
+                <!-- 最初的搜索框 -->
+                <label class="search-bar_label" hidden="{{inputShowed}}" bindtap="showInput" >
+                    <icon class="icon-search" type="search" size="14"></icon>
+                    <view class="search-bar_text">搜索</view>
+                </label>
+            </view>
+            <!-- 取消搜索 -->
+            <view class="search-bar_cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+        </view>
+    </view>
+</view>
+
+<!--文章展示-->
+
+<scroll-view class="scroll-wrapper" scroll-y scroll-with-animation="true" style="height: 90%; width: 750rpx; display: block; box-sizing: border-box">
+	<view class="navigate-item" wx:for="{{searchList}}" bindtap="showArticle" data-name="{{searchList[index].name}}">
+		<view style="width: 100%; background: #ddf8f0; height: 200rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 5rpx;">
+      <image style="position: relative; width: 247rpx; height: 167rpx; display: inline-block; box-sizing: border-box; left: 504rpx; top: 17rpx" src="{{searchList[index].Imgpath}}" />
+      <text style="position: absolute; left: 30rpx; top: 30rpx">活动名称：{{searchList[index].found}}</text>
+      <text class="introtext" style="font-size: small;position: absolute; left: 30rpx; top: 80rpx">活动简介：{{searchList[index].intro}}</text>
+      <text style="font-size: small;position: absolute; left: 30rpx; top: 130rpx">发布社团：{{searchList[index].name}}</text>
+    </view>
+    <view style="font-size:10rpx;"><text decode="true">&nbsp;</text></view>
+	</view>
+</scroll-view>
+
+<!-- 弹框 -->
+
+<view class='toast-box' hidden='{{!ifName}}'>
+        <view class='toastbg'></view>
+        <view class='showToast' style="position: absolute; left: 0rpx; top: -300rpx; width: 600rpx; height: 790rpx; display: block; box-sizing: border-box">
+            <view class='toast-title' style="position: relative; left: 0rpx; top: 0rpx">
+                <text style="position: relative; left: -15rpx; top: -1rpx">请输入报名信息</text>
+            </view>
+            <view class='toast-main' style="position: relative; left: 0rpx; top: 0rpx; width: 600rpx; height: 826rpx; display: block; box-sizing: border-box">
+
+
+                <view class='toast-input' style="width: 536rpx; height: 84rpx; display: block; box-sizing: border-box">
+                  <view style="position: relative; width: 132rpx; height: 46rpx; display: block; box-sizing: border-box; left: -31rpx; top: 2rpx">用户名:</view>
+                    <input placeholder='' bindinput='setValue' data-name='stuEidtName' model:value="{{name}}"  style="position: relative; width: 366rpx; height: 46rpx; display: block; box-sizing: border-box; left: 106rpx; top: -44rpx" disabled="true"></input>
+
+                </view>
+                <view class='toast-input' style="width: 536rpx; height: 84rpx; display: block; box-sizing: border-box">
+                  <view style="position: relative; width: 162rpx; height: 46rpx; display: block; box-sizing: border-box; left: -30rpx; top: 2rpx">报名社团:</view>
+                    <input placeholder='' bindinput='setValue' data-name='stuEidtName' model:value="{{clubname}}"  style="position: relative; width: 366rpx; height: 46rpx; display: block; box-sizing: border-box; left: 106rpx; top: -44rpx" disabled="true"></input>
+
+                </view>
+                <view class="outside" style="width: 536rpx; height: 80rpx; display: block; box-sizing: border-box">
+                  <view style="position: relative; width: 132rpx; height: 46rpx; display: block; box-sizing: border-box; left: -31rpx; top: 2rpx">学院:</view>
+                    <input placeholder='请输入学院' bindinput='setValue' data-name='stuEidtName' model:value="{{college}}"  style="position: relative; width: 366rpx; height: 46rpx; display: block; box-sizing: border-box; left: 106rpx; top: -44rpx"></input>
+               </view>
+                <view class = 'toast-input1' style="width: 532rpx; height: 80rpx; display: block; box-sizing: border-box">                    
+                  <view style="position: relative; width: 132rpx; height: 46rpx; display: block; box-sizing: border-box; left: -31rpx; top: 2rpx">班级:</view>
+                    <input placeholder='请输入班级' bindinput='setValue' data-name='stuEidtName' model:value="{{class}}"  style="position: relative; width: 366rpx; height: 46rpx; display: block; box-sizing: border-box; left: 106rpx; top: -44rpx"></input>
+                </view>
+                <view class = 'toast-input2' style="width: 532rpx; height: 80rpx; display: block; box-sizing: border-box">                    
+                  <view style="position: relative; width: 132rpx; height: 46rpx; display: block; box-sizing: border-box; left: -31rpx; top: 2rpx">年龄:</view>
+                    <input placeholder='请输入年龄' bindinput='setValue' data-name='stuEidtName' model:value="{{age}}"  style="position: relative; width: 366rpx; height: 46rpx; display: block; box-sizing: border-box; left: 106rpx; top: -44rpx"></input>
+                </view>
+                <view class = 'toast-input2' style="width: 532rpx; height: 80rpx; display: block; box-sizing: border-box">                    
+                  <view style="position: relative; width: 132rpx; height: 46rpx; display: block; box-sizing: border-box; left: -31rpx; top: 2rpx">性别:</view>
+                    <input placeholder='请输入性别' bindinput='setValue' data-name='stuEidtName' model:value="{{sex}}"  style="position: relative; width: 366rpx; height: 46rpx; display: block; box-sizing: border-box; left: 106rpx; top: -44rpx"></input>
+                </view>
+                <view class = 'toast-input2' style="width: 532rpx; height: 80rpx; display: block; box-sizing: border-box">                    
+                  <view style="position: relative; width: 132rpx; height: 46rpx; display: block; box-sizing: border-box; left: -31rpx; top: 2rpx">年级:</view>
+                    <input placeholder='请输入年级' bindinput='setValue' data-name='stuEidtName' model:value="{{grade}}"  style="position: relative; width: 366rpx; height: 46rpx; display: block; box-sizing: border-box; left: 106rpx; top: -44rpx"></input>
+                </view>
+                <view class = 'toast-input2' style="width: 532rpx; height: 80rpx; display: block; box-sizing: border-box">                    
+                  <view style="position: relative; width: 132rpx; height: 46rpx; display: block; box-sizing: border-box; left: -31rpx; top: 2rpx">姓名:</view>
+                    <input placeholder='请输入姓名' bindinput='setValue' data-name='stuEidtName' model:value="{{namename}}"  style="position: relative; width: 366rpx; height: 46rpx; display: block; box-sizing: border-box; left: 106rpx; top: -44rpx"></input>
+                </view>
+                <view class="section section_gap">
+
+</view>
+            </view>
+            <view class='toast-button'>
+                <view class='button1' style="width: 263rpx; height: 94rpx; display: block; box-sizing: border-box">
+                    <button catchtap='cancel' bindtap = "cancel" style="width: 300rpx; height: 94rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; position: relative">取消</button>
+                </view>
+                <view class='button2'>
+                    <button catchtap='confirm' bindtap="confirm" style="width: 300rpx; height: 94rpx; display: block; box-sizing: border-box; left: 40rpx; top: 0rpx; position: relative">确定</button>
+                </view>
+            </view>
+        </view>
+</view>
+

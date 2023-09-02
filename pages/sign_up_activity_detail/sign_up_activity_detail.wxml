@@ -1,0 +1,20 @@
+<!--pages/user_club_info_detail/user_club_info_detail.wxml-->
+<view class='anBox' >
+    <view class='anImg'>
+      <image src='{{article_detail.Imgpath}}' />
+    </view>
+    <view class='articlesName'>{{article_detail.an_title}}</view>
+    <view class='articlesMessage'>
+      <view class='articles'>
+        <text class='club_ID'>{{article_detail.club_ID}}</text>
+        <text class='date'>{{article_detail.an_date}}</text>
+      </view>
+      <view>
+      <text> 下面是正文内容\n</text>
+      <text>{{article_detail.content}}</text>
+      </view>
+    </view>
+  </view>
+
+  <text style="position: fixed; left: 322rpx; top: 95%;"bindtap="LikeOrNot">{{like}}</text>
+

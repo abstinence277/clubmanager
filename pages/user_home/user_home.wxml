@@ -1,0 +1,38 @@
+<!--pages/user_home/user_home.wxml-->
+
+
+
+<view class="s_view" style="display: flex;justify-content: center;">
+  <button bindtap = "club_info" class="notice" size="mini">社团简介</button>
+  <button bindtap = "Sign_club"class="recruit" size="mini">招新报名</button>
+  <button bindtap = "Sign_activity" class="activity" size="mini">活动报名</button>
+</view>
+
+<scroll-view class="scroll-wrapper" scroll-y scroll-with-animation="true" style="height: 1108rpx; width: 750rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 226rpx">
+	<view class="navigate-item" wx:for="{{activitylist}}" bindtap="showArticle" data-name="{{activitylist[index].name}}">
+		<view style="width: 750rpx; background: #ddf8f0; height: 200rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx">
+    <image style="position: relative; width: 247rpx; height: 167rpx; display: inline-block; box-sizing: border-box; left: 504rpx; top: 17rpx" src="{{activitylist[index].Imgpath}}" />
+  
+    <text style="position: absolute; left: 50rpx; top: 40rpx">公告标题：{{activitylist[index].an_title}}</text>
+
+    <text style="position: absolute; left: 50rpx; top: 120rpx">发布时间:{{activitylist[index].an_date}}</text>
+  </view>
+    <view style="font-size:10rpx;"><text decode="true">&nbsp;</text></view>
+	</view>
+  <view class="navigate-item" wx:for="{{clublist}}" bindtap="showArticle" data-name="{{clublist[index].name}}">
+		<view style="width: 750rpx; background: #ddf8f0; height: 200rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx">
+    <image style="position: relative; width: 247rpx; height: 167rpx; display: inline-block; box-sizing: border-box; left: 504rpx; top: 17rpx" src="{{'cloud://club-manager-3ghmftue4e9f0d99.636c-club-manager-3ghmftue4e9f0d99-1302029001/club/'+clublist[index].ID+'.jpg'}}" />
+  
+    <text style="position: absolute; left: 50rpx; top: 40rpx">社团名称：{{clublist[index].club_name}}</text>
+
+    <text style="position: absolute; left: 50rpx; top: 120rpx">成立时间:{{clublist[index].club_found}}</text>
+  </view>
+    <view style="font-size:10rpx;"><text decode="true">&nbsp;</text></view>
+	</view>
+</scroll-view>
+
+
+
+
+
+

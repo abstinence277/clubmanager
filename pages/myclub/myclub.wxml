@@ -1,0 +1,11 @@
+
+<scroll-view scroll-y="true" style="height: 1100rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+
+  <view wx:for="{{club_name}}" wx:for-index="index" style="width: 750rpx; background: #ddf8f0; height: 200rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx">
+    <!--展示信息--> 
+    <image style="position: relative; width: 247rpx; height: 167rpx; display: inline-block; box-sizing: border-box; left: 504rpx; top: 17rpx" src="{{'cloud://club-manager-3ghmftue4e9f0d99.636c-club-manager-3ghmftue4e9f0d99-1302029001/club/'+result[index]+'.jpg'}}" />
+    <text style="position: absolute; left: 30rpx; top: 30rpx">社团名称：{{club_name[index]}}</text>
+    <text style="position: absolute; left: 30rpx; top: 100rpx">加入时间：{{date}}</text>
+    </view>
+
+</scroll-view>

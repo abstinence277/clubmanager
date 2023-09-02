@@ -1,0 +1,11 @@
+<scroll-view scroll-y="true" style="height: 1400rpx; width: 750rpx; display: block; box-sizing: border-box" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <mp-slideview wx:for="{{result}}" wx:for-item="op" data-index="{{index}}" style="width: 750rpx; background: #ddf8f0; height: 200rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 0rpx" show="{{false}}" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" bindtap="goArticle">
+    <!-- 每个item的view -->
+    <!--展示信息--> 
+    <image style="position: relative; width: 247rpx; height: 167rpx; display: inline-block; box-sizing: border-box; left: 504rpx; top: 17rpx" src="https://mmbiz.qpic.cn/mmbiz_png/icTdbqWNOwNQ0ia79enzYJBsZ3CIkLQGe39qeOxbpT9oM9KaCthzBa0PF75xzBGjZQGlM69TDggxpNX7ACibCjjtw/0?wx_fmt=png&t=1614824466" />
+    <text style="position: absolute; left: 30rpx; top: 30rpx">收藏名称：{{op.club_name}}</text>
+    <text style="font-size: small;position: absolute; left: 30rpx; top: 80rpx">收藏时间：{{op.time}}</text>
+    <text class="club_intro" style="font-size: small;position: absolute; left: 30rpx; top: 130rpx">主要内容：{{op.content}}</text> 
+
+  </mp-slideview>
+</scroll-view>

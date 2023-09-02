@@ -1,0 +1,5 @@
+<!--pages/manager_club_news/manager_club_news.wxml-->
+<image src='/images/aa.jpeg' style="width: 748rpx; height: 1408rpx; display: inline-block; box-sizing: border-box"></image>
+<button style="position: relative; left: 12rpx; top: -1100rpx; width: 272rpx; height: 86rpx; display: block; box-sizing: border-box; text-align: center;border-style: solid;" type="default" bindtap="clubmana">社团管理</button>
+<button style="position: relative; left: 0rpx; top: -968rpx; width: 272rpx; height: 86rpx; display: block; box-sizing: border-box;border-style: solid;" type="default" bindtap="actmana">活动管理</button>
+<button style="position: relative; left: 0rpx; top: -826rpx; width: 272rpx; height: 86rpx; display: block; box-sizing: border-box;border-style: solid;" bindtap="logout" type="default">退出登录</button>
